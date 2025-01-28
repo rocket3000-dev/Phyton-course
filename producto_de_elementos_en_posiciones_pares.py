@@ -9,7 +9,7 @@ while number != -1:
 
     if number != -1:
         list_number.append(number)
-                                 #0,1,2,3,4,5
+        
 #aqui la lista tiene los valores [1,2,3,4,5,6]
 result = 1
 for n in list_number:
