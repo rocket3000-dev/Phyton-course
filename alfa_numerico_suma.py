@@ -2,26 +2,10 @@
 
 print("Ingrese algo que contenga letras y numeros")
 alfa_number=input()
-result=0
+result = 0
 
 for m in alfa_number:
-    if m == "1":
-        result+=1
-    if m == "2":
-        result+=2
-    if m == "3":
-        result+=3
-    if m == "4":
-        result+=4
-    if m == "5":
-        result+=5
-    if m == "6":
-        result+=6
-    if m == "7":
-        result+=7
-    if m == "8":
-        result+=8
-    if m == "9":
-        result+=9
+    if m == "1" or m == "2" or m == "3" or m == "4" or m == "5" or m == "6" or m == "7" or m == "8" or m == "9":
+        result += ord(m) - ord('0')
     
 print(result)
