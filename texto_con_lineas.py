@@ -1,19 +1,15 @@
 #texto = hola
 #print : h-o-l-a
-
+list_text=[]
 print("Ingrese un texto el que sea")
 text=input()
 contador=len(text)
 
 for m in text:
 
-    print(m, end="")
+    list_text.append(m)
     if contador > 1:
-        print("-",end="")
+        list_text.append("-")
     contador-=1
 
-print()
-
-
-
-
+print(list_text)    # h-o-l-a
