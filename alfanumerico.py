@@ -6,7 +6,7 @@ print("Ingrese un texto")
 text=input()
 
 for letra in text:
-    if ord(letra) - ord('a') >= 0:
+    if ord(letra) - ord('a') >= 0 or ord(letra) - ord('A') >= 0:
         list_letras.append(letra)
 
 print(list_letras)
