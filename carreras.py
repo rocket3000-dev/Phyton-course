@@ -30,13 +30,15 @@ while carro < int(longitud):
     casilla=input()
 
     if casilla == "f":  #por si quiere que el coche avance
+        lista_casilla[carro] = " 🚔 "
         carro+=1
         lista_casilla.insert(0,"_")
         lista_casilla.pop()
 
     elif casilla == "b":    #por si quiere que el coche retroceda
 
-        if carro >= 1: 
+        if carro >= 1:
+            lista_casilla[carro] = " 🚗 " 
             carro-=1
             lista_casilla.pop(0)
             lista_casilla.append("_")
@@ -48,7 +50,7 @@ while carro < int(longitud):
     contador+=1
 
 print(lista_casilla)
+#🚔
 
-
-print("tu coche 🚗 logro terminar la carrera")
+print("tu coche  🚔 logro terminar la carrera")
 print("la cantidad de intentos que le tomo fue de",contador)
