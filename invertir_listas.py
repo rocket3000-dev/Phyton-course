@@ -15,3 +15,4 @@ for elemento in list_number:
     print(f"indice: {index_externo}, valor:{list_number[index_externo]}")
 
     index_externo-=1
+    
