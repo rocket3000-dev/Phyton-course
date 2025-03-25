@@ -38,7 +38,3 @@ for ch in lista_2:
 
 print()
 
-
-
-
-
