@@ -1,14 +1,11 @@
-contador=-1
-carro=0
-
 fila = 0    #fila representa la lista en donde se colocara el carro
 columna = 0 
 
-"""0 = _ _ _ _ _
-1 = * _ _ _ _
-2 = _ _ _ _ _
-3 = _ _ _ _ _
-4 = _ _ _ _ _"""
+#0 = _ _ _ _ _
+#1 = * _ _ _ _
+#2 = _ _ _ _ _
+#3 = _ _ _ _ _
+#4 = _ _ _ _ _
 
 while dir != "stop":
     print("l = izquierda u = arriba r = derecha b = abajo cuando quiera acabar ingrese stop")
@@ -23,17 +20,21 @@ while dir != "stop":
     #esta seccion de if nos ayuda a actualizar la fila o la columna donde se encuentre el carro
 
     if dir == "l":      #aqui se decide si ira hacia la izquierda el coche
-        columna-=1
+        if columna > 0:
+            columna-=1
     elif dir == "u":    #aqui se decide si ira hacia arriba el coche
-        fila-=1
-    elif dir == "r":    #aqui se decide si ira hacia la derecha el coche
-        columna+=1
-    elif dir == "b":    #aqui se decide si ira abajo el coche
-        fila+=1
+        if fila > 0:
+            fila-=1
+    elif dir == "r":    #aqui se decide si ira hacia la derecha el coche        
+        if columna < 5:
+            columna+=1
+    elif dir == "b":
+        if fila > 5:    #aqui se decide si ira abajo el coche
+            fila+=1
     
     #esta seccion de if nos ayuda a decidir que listas alterar   
 
-    if fila == 0:
+    if fila == 0:    
         lista_0[columna] = "🚗"
     elif fila == 1:
         lista_1[columna] = "🚗"
