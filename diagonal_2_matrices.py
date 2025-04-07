@@ -12,3 +12,4 @@ columna=4
 for diagonal in range(fila):
     print(f"fila {columna} : {matris[diagonal] [columna]}")
     columna-=1
+    
