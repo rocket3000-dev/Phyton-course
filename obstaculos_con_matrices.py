@@ -11,38 +11,47 @@ columna=0
 fila_futura=0
 columna_futura=0
 
-while direccion != "stop":
+dir = repr(input())
+print(dir)
+
+#if(dir == repr('\x1b[D')):
+#if(dir == repr('\x1b[C')):
+
+#if(dir == repr('\x1b[A')):
+#if(dir == repr('\x1b[B')):
+
+while direccion != repr("stop"):
 
     for fila_item in range(0, 5):
         print(matris[fila_item])
-        
-    print("l / izquierda : r / derecha : u / arriba : b / abajo : stop / finish ")
-    direccion=input()
+
+    print(" <- / izquierda : -> / derecha : flecha arriba / arriba : flecha abajo / abajo : stop / finish ")
+    direccion= repr(input())
 
 
 
-    if direccion == "l":            # Izquierda
+    if direccion == repr('\x1b[D'):            # Izquierda
         if columna_futura > 0:
             matris[fila_futura][columna_futura] = "_"      
             columna_futura-=1    
 
 
 
-    elif direccion == "r":          # Derecha
+    elif direccion == repr('\x1b[C'):          # Derecha
         if columna_futura < 4:     
             matris[fila_futura][columna_futura] = "_"
             columna_futura+=1
 
 
 
-    elif direccion == "u":          # Arriba
+    elif direccion == repr('\x1b[A'):          # Arriba
         if fila_futura > 0:
             matris[fila_futura][columna_futura] = "_"
             fila_futura-=1
 
 
 
-    elif direccion == "b":          # Abajo
+    elif direccion == repr('\x1b[B'):          # Abajo
         if fila_futura < 4:
             matris[fila_futura][columna_futura] = "_"
             fila_futura+=1
