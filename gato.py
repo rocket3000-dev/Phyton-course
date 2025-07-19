@@ -29,8 +29,9 @@ jugador=False #falso == x
 contador=0
 simbolo='x'
 flag_win=False
+jugadas=0
 
-while flag_win == False:
+while flag_win == False and jugadas <= 8:
     for x in range(0,3):
         print(matriz[x])
 
@@ -41,9 +42,9 @@ while flag_win == False:
     print("Ingresa la columna")
     columna=int(input())
 
-    
     if  fila >= 0 and fila <= 2 and columna >= 0 and columna <= 2 and matriz[fila][columna] == ' ':
         matriz[fila][columna] = simbolo
+        jugadas+=1
 
         #valida la columna 0 
         if matriz[0][0] == simbolo and matriz[1][0] == simbolo and matriz[2][0] == simbolo:
